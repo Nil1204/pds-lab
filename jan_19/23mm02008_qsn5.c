@@ -4,7 +4,7 @@ int main() {
     int number;
     printf("Enter a number: ");
     scanf("%d", &number);
-
+    printf("%d\n",number & 1 );
     if(number & 1){
         printf("%d is an odd number.\n", number);
     }
