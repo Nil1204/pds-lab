@@ -1,26 +1,28 @@
 #include <stdio.h>
-#include <math.h>
 int main()
 {
-    int a;
-    scanf("%d", &a);
-    int b = a;
-    int c;
-    int sum = 0;
-    while(b>0)
+    int num;
+    printf("Enter the number : ");
+    scanf("%d", &num);
+    while (num < 100 || num > 999)
     {
-        c = b%10;
-        sum = sum + c*c*c;
-        b = b/10;
+        printf("Incorrect input.\n");
+        scanf("%d", &num);
     }
-    if(a>=100 && a<=999)
+    int temp = num;
+    int d1, d2, d3;
+    d1 = temp % 10;
+    temp /= 10;
+    d2 = temp % 10;
+    temp /= 10;
+    d3 = temp % 10;
+    int sum_cube = d1 * d1 * d1 + d2 * d2 * d2 + d3 * d3 * d3;
+    if (sum_cube == num)
     {
-        if(sum == a)
-        printf("Armstrong Number");
-        else
-        printf("Not an Armstrong Number");
+        printf("Yes\n");
     }
     else
-    printf("Incorrect Input");
+        printf("No\n");
+
     return 0;
 }
