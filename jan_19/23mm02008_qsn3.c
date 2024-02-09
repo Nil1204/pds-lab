@@ -7,6 +7,7 @@ int main() {
     years = totaldays / 365;
     int remainingDays = totaldays % 365;
     months = remainingDays / 30;
+    remainingDays %= 30;
     weeks = remainingDays / 7;
     days = remainingDays % 7;
 
