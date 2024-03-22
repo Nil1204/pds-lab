@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void reverseArray(char * arr, int start, int end) {
+void reverseArray(char arr[], int start, int end) {
     if (start >= end)
         return;
 

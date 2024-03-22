@@ -1,21 +1,21 @@
 #include <stdio.h>
 
 int main(){
-    char text[101], el;
+    char text[101], ch;
     printf("Enter a string: ");
     fgets(text, 100, stdin);
 
     printf("Enter a character: ");
-    scanf("%c", &el);
+    scanf("%c", &ch);
 
     int i = 0, count = 0;
     while(text[i] != '\0'){
-        if(text[i] == el)
+        if(text[i] == ch)
             count++;
         i++;
     }
 
-    printf("Frequency of l is: %d\n", count);
+    printf("Frequency of %c is: %d\n", ch, count);
 
     return 0;
 }

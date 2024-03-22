@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-    char text[101];
+    char text[100];
     printf("Input: ");
     fgets(text, 100, stdin);
 

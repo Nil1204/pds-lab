@@ -1,31 +1,32 @@
 #include <stdio.h>
-
-void checkGreaterThanAverage(int arr[], int n){
-    float avg = 0;
-
-    for(int i = 0; i < n; i++){
-        avg += arr[i];
-    }
-
-    avg /= n;
-    printf("%f", avg);
-}
-
-int main(){
-    int n;
-    printf("Size of array: ");
-    scanf("%d", &n);
-
-    int arr[n];
-    printf("Enter the elements of array:-\n");
-    for (int i = 0; i < n; i++)
+void func(int arr[], int size)
+{
+    int sum = 0;
+    for (int i = 0; i < size; i++)
     {
-        printf("%d: ", i);
-        scanf("%d", (&arr[i]));
+        sum += arr[i];
     }
-
-
-    checkGreaterThanAverage(arr, n);
+    float avg = sum / size;
+    for (int i = 0; i < size; i++)
+    {
+        if (arr[i] > avg)
+        {
+            printf("%d ", arr[i]);
+        }
+    }
+}
+int main()
+{
+    int size;
+    printf("Enter the size of the array : ");
+    scanf("%d", &size);
+    int arr[size];
+    for (int i = 0; i < size; i++)
+    {
+        printf("enter: ");
+        scanf("%d", &arr[i]);
+    }
+    func(arr, size);
 
     return 0;
 }
